@@ -12,7 +12,7 @@ sys.path.append("D:/Workspace/FanNet/TransMIL-main")
 import torch.utils.data as data
 from torch.utils.data import dataloader
 
-from util.utils import *  # 放到根目录里面才能import
+# from util.utils import *  # 放到根目录里面才能import
 
 
 def makeparse():
@@ -24,7 +24,7 @@ def makeparse():
     return args
 
 
-class CoadData(data.Dataset):
+class TcgaData(data.Dataset):
     def __init__(self, dataset_cfg=None,
                  state=None):
         # Set all input args as attributes
@@ -79,5 +79,5 @@ if __name__ == "__main__":
     cfg = read_yaml(args.config)
     dataset_cfg = cfg.Data
     # print(dataset_cfg)
-    dataset = CoadData(dataset_cfg, state=cfg.General.server)
+    dataset = TcgaData(dataset_cfg, state=cfg.General.server)
     print(dataset[1])

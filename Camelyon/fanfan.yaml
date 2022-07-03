@@ -14,9 +14,9 @@ General:
     log_path: logs/
 
 Data:
-    dataset_name: self_data
+    dataset_name: tcga_data
     data_shuffle: False
-    data_dir: dataset/tcga/
+    data_dir: E:/Workspace/Project/CLAM/data/FEATURES_DIRECTORY/pt_files/
     label_dir: dataset_csv/tcga_coad/
     fold: 0
     nfold: 4

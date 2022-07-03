@@ -6,7 +6,7 @@ from nystrom_attention import NystromAttention, Nystromformer # https://github.c
 import torchvision.models as models
 from torch.optim.optimizer import Optimizer
 
-
+# from https://github.com/Ycblue/TransMIL
 ## Lookahead optimizer + CE Loss
 
 class TransMIL(nn.Module):

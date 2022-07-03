@@ -2,6 +2,7 @@ import argparse
 from pathlib import Path
 import numpy as np
 import glob
+import os
 
 from datasets import DataInterface
 from models import ModelInterface
@@ -16,7 +17,7 @@ def make_parse():
     parser = argparse.ArgumentParser()
     parser.add_argument('--stage', default='train', type=str)
     parser.add_argument('--config', default='Camelyon/TransMIL.yaml',type=str)
-    parser.add_argument('--gpus', default = [2])
+    parser.add_argument('--gpus', default = [0])
     parser.add_argument('--fold', default = 0)
     args = parser.parse_args()
     return args
@@ -77,6 +78,9 @@ def main(cfg):
             trainer.test(model=new_model, datamodule=dm)
 
 if __name__ == '__main__':
+
+    with open(r'E:\Workspace\Project\TransMIL\Camelyon\fanfan.yaml') as file:
+        print('niuwa')
 
     args = make_parse()
     cfg = read_yaml(args.config)
