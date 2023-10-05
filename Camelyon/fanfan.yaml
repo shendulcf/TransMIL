@@ -14,10 +14,10 @@ General:
     log_path: logs/
 
 Data:
-    dataset_name: tcga_data
+    dataset_name: camel_data
     data_shuffle: False
-    data_dir: E:/Workspace/Project/CLAM/data/FEATURES_DIRECTORY/pt_files/
-    label_dir: dataset_csv/tcga_coad/
+    data_dir: r'D:/NLST_pt_files/FEATURES_level1/pt_files'
+    label_dir: D:/Proiects/Github/Transmil/dataset_csv/nlst_100
     fold: 0
     nfold: 4
 

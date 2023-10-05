@@ -79,9 +79,6 @@ def main(cfg):
 
 if __name__ == '__main__':
 
-    with open(r'E:\Workspace\Project\TransMIL\Camelyon\fanfan.yaml') as file:
-        print('niuwa')
-
     args = make_parse()
     cfg = read_yaml(args.config)
 

@@ -3,16 +3,22 @@ import torch
 import pandas as pd
 from pathlib import Path
 import argparse
-import openslide
-import sys
+OPENSLIDE_PATH = r'D:\StudyApps\anaconda3\openslide-win64-20230414\bin'
+
 import os
-sys.path.append("D:/Workspace/FanNet/TransMIL-main")
-# os.chdir(os.path.dirname(__file__))
-# os.chdir('D:/Workspace/FanNet/TransMIL-main')
+if hasattr(os, 'add_dll_directory'):
+    # Windows
+    with os.add_dll_directory(OPENSLIDE_PATH):
+        import openslide as ops
+else:
+    import openslide as ops
+# import openslide
+import sys
+# import os
 import torch.utils.data as data
 from torch.utils.data import dataloader
 
-# from util.utils import *  # 放到根目录里面才能import
+# from ..util.utils import *  # 放到根目录里面才能import
 
 
 def makeparse():

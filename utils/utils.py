@@ -21,11 +21,11 @@ def load_loggers(cfg):
     
     #---->TensorBoard
     tb_logger = pl_loggers.TensorBoardLogger(log_path+str(log_name),
-                                             name = version_name, version = f'fold{cfg.Data.fold}',
-                                             log_graph = True, default_hp_metric = False)
+                                            name = version_name, version = f'fold{cfg.Data.fold}',
+                                            log_graph = True, default_hp_metric = False)
     #---->CSV
     csv_logger = pl_loggers.CSVLogger(log_path+str(log_name),
-                                      name = version_name, version = f'fold{cfg.Data.fold}', )
+                                    name = version_name, version = f'fold{cfg.Data.fold}', )
     
     return [tb_logger, csv_logger]
 

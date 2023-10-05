@@ -7,6 +7,16 @@
 ###############################################################################
 
 # Requires: Openslide (https://openslide.org/download/)
+# The path can also be read from a config file, etc.
+OPENSLIDE_PATH = r'D:\StudyApps\anaconda3\openslide-win64-20230414\bin'
+
+import os
+if hasattr(os, 'add_dll_directory'):
+    # Windows
+    with os.add_dll_directory(OPENSLIDE_PATH):
+        import openslide as ops
+else:
+    import openslide as ops
 
 from multiprocessing.dummy import Pool as ThreadPool
 from os.path import join, isfile, exists
@@ -17,7 +27,7 @@ import numpy as np
 import imageio
 from PIL import Image
 import argparse
-import openslide as ops
+# import openslide as ops
 import shapely.geometry as sg
 import pandas as pd
 

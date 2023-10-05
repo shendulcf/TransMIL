@@ -50,15 +50,15 @@ class  ModelInterface(pl.LightningModule):
                                                      torchmetrics.Specificity(average = 'macro',
                                                                             num_classes = self.n_classes)])
         else : 
-            self.AUROC = torchmetrics.AUROC(num_classes=2, average = 'macro')
-            metrics = torchmetrics.MetricCollection([torchmetrics.Accuracy(num_classes = 2,
+            self.AUROC = torchmetrics.AUROC(task = 'binary', num_classes=2, average = 'macro')
+            metrics = torchmetrics.MetricCollection([torchmetrics.Accuracy(task = 'binary', num_classes = 2,
                                                                            average = 'micro'),
-                                                     torchmetrics.CohenKappa(num_classes = 2),
-                                                     torchmetrics.F1(num_classes = 2,
+                                                     torchmetrics.CohenKappa(task = 'binary', num_classes = 2),
+                                                     torchmetrics.F1Score(task = 'binary', num_classes = 2,
                                                                      average = 'macro'),
-                                                     torchmetrics.Recall(average = 'macro',
+                                                     torchmetrics.Recall(task = 'binary', average = 'macro',
                                                                          num_classes = 2),
-                                                     torchmetrics.Precision(average = 'macro',
+                                                     torchmetrics.Precision(task = 'binary', average = 'macro',
                                                                             num_classes = 2)])
         self.valid_metrics = metrics.clone(prefix = 'val_')
         self.test_metrics = metrics.clone(prefix = 'test_')
@@ -220,6 +220,7 @@ class  ModelInterface(pl.LightningModule):
             to overwrite the corresponding value in self.hparams.
         """
         class_args = inspect.getargspec(Model.__init__).args[1:]
+        # class_args = list(inspect.signature(Model.__init__).parameters.keys())[1:]
         inkeys = self.hparams.model.keys()
         args1 = {}
         for arg in class_args:
