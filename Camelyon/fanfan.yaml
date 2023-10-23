@@ -16,8 +16,8 @@ General:
 Data:
     dataset_name: camel_data
     data_shuffle: False
-    data_dir: r'D:/NLST_pt_files/FEATURES_level1/pt_files'
-    label_dir: D:/Proiects/Github/Transmil/dataset_csv/nlst_100
+    data_dir: D:/NLST_pt_files/FEATURES_level1/pt_files/
+    label_dir: dataset_csv/nlst_100/
     fold: 0
     nfold: 4
 
