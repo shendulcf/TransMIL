@@ -50,15 +50,15 @@ class  ModelInterface(pl.LightningModule):
                                                      torchmetrics.Specificity(average = 'macro',
                                                                             num_classes = self.n_classes)])
         else : 
-            self.AUROC = torchmetrics.AUROC(task = 'binary', num_classes=2, average = 'macro')
-            metrics = torchmetrics.MetricCollection([torchmetrics.Accuracy(task = 'binary', num_classes = 2,
+            self.AUROC = torchmetrics.AUROC(num_classes=2, average = 'macro')
+            metrics = torchmetrics.MetricCollection([torchmetrics.Accuracy(num_classes = 2,
                                                                            average = 'micro'),
-                                                     torchmetrics.CohenKappa(task = 'binary', num_classes = 2),
-                                                     torchmetrics.F1Score(task = 'binary', num_classes = 2,
+                                                     torchmetrics.CohenKappa(num_classes = 2),
+                                                     torchmetrics.F1(num_classes = 2,
                                                                      average = 'macro'),
-                                                     torchmetrics.Recall(task = 'binary', average = 'macro',
+                                                     torchmetrics.Recall(average = 'macro',
                                                                          num_classes = 2),
-                                                     torchmetrics.Precision(task = 'binary', average = 'macro',
+                                                     torchmetrics.Precision(average = 'macro',
                                                                             num_classes = 2)])
         self.valid_metrics = metrics.clone(prefix = 'val_')
         self.test_metrics = metrics.clone(prefix = 'test_')

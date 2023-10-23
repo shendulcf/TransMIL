@@ -67,6 +67,7 @@ def main(cfg):
     )
 
     #---->train or test
+    print(cfg.General.server)
     if cfg.General.server == 'train':
         trainer.fit(model = model, datamodule = dm)
     else:

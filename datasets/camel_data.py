@@ -19,7 +19,7 @@ class CamelData(data.Dataset):
         self.fold = self.dataset_cfg.fold
         self.feature_dir = self.dataset_cfg.data_dir
         self.csv_dir = self.dataset_cfg.label_dir + f'fold{self.fold}.csv'
-        self.slide_data = pd.read_csv(self.csv_dir, index_col=0)
+        self.slide_data = pd.read_csv(self.csv_dir) # delete index_col = 0
 
         #---->order
         self.shuffle = self.dataset_cfg.data_shuffle
