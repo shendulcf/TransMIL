@@ -70,7 +70,7 @@ cfg: &id019 !!python/object/new:addict.addict.Dict
         - false
       - !!python/tuple
         - data_dir
-        - /home/sci/Disk_data/Datasets/NLST/FEATURES_level1/pt_files/
+        - /home/sci/Disk2/NLST/FEATURES_level0/pt_files/
       - !!python/tuple
         - label_dir
         - dataset_csv/nlst_100/
@@ -109,7 +109,7 @@ cfg: &id019 !!python/object/new:addict.addict.Dict
             num_workers: 8
           state: *id003
       dictitems:
-        data_dir: /home/sci/Disk_data/Datasets/NLST/FEATURES_level1/pt_files/
+        data_dir: /home/sci/Disk2/NLST/FEATURES_level0/pt_files/
         data_shuffle: false
         dataset_name: camel_data
         fold: '3'
@@ -223,8 +223,8 @@ cfg: &id019 !!python/object/new:addict.addict.Dict
             gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
             AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
             aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
-            Z2UKcQFYDgAAADk0MTMyNTU5NTcxNzYwcQJYAwAAAGNwdXEDSwFOdHEEUS6AAl1xAFgOAAAAOTQx
-            MzI1NTk1NzE3NjBxAWEuAQAAAAAAAAAAAIB/
+            Z2UKcQFYDgAAADk0Mzg0NDUxNDE4OTkycQJYAwAAAGNwdXEDSwFOdHEEUS6AAl1xAFgOAAAAOTQz
+            ODQ0NTE0MTg5OTJxAWEuAQAAAAAAAAAAAIB/
         - 0
         - !!python/tuple []
         - !!python/tuple []
@@ -256,8 +256,8 @@ cfg: &id019 !!python/object/new:addict.addict.Dict
             gAKKCmz8nEb5IGqoUBkugAJN6QMugAJ9cQAoWBAAAABwcm90b2NvbF92ZXJzaW9ucQFN6QNYDQAA
             AGxpdHRsZV9lbmRpYW5xAohYCgAAAHR5cGVfc2l6ZXNxA31xBChYBQAAAHNob3J0cQVLAlgDAAAA
             aW50cQZLBFgEAAAAbG9uZ3EHSwR1dS6AAihYBwAAAHN0b3JhZ2VxAGN0b3JjaApGbG9hdFN0b3Jh
-            Z2UKcQFYDgAAADk0MTMyNTU5NTY4ODQ4cQJYAwAAAGNwdXEDSwFOdHEEUS6AAl1xAFgOAAAAOTQx
-            MzI1NTk1Njg4NDhxAWEuAQAAAAAAAAAAAIB/
+            Z2UKcQFYDgAAADk0Mzg0NDUxNDE1OTg0cQJYAwAAAGNwdXEDSwFOdHEEUS6AAl1xAFgOAAAAOTQz
+            ODQ0NTE0MTU5ODRxAWEuAQAAAAAAAAAAAIB/
         - 0
         - !!python/tuple []
         - !!python/tuple []
@@ -604,7 +604,7 @@ data: &id022 !!python/object/new:addict.addict.Dict
     - false
   - !!python/tuple
     - data_dir
-    - /home/sci/Disk_data/Datasets/NLST/FEATURES_level1/pt_files/
+    - /home/sci/Disk2/NLST/FEATURES_level0/pt_files/
   - !!python/tuple
     - label_dir
     - dataset_csv/nlst_100/
@@ -643,7 +643,7 @@ data: &id022 !!python/object/new:addict.addict.Dict
         num_workers: 8
       state: *id021
   dictitems:
-    data_dir: /home/sci/Disk_data/Datasets/NLST/FEATURES_level1/pt_files/
+    data_dir: /home/sci/Disk2/NLST/FEATURES_level0/pt_files/
     data_shuffle: false
     dataset_name: camel_data
     fold: '3'

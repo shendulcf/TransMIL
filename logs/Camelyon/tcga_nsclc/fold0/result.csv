@@ -1,2 +1,2 @@
 ,test_Accuracy,test_CohenKappa,test_F1,test_Recall,test_Precision,auc
-0,0.9,0.8,0.8999375,0.9,0.9010025,0.96750003
+0,0.85,0.7,0.8499062,0.85,0.85087717,0.93999994
